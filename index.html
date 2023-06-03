@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <title>Breakfast Menu - Welcome to Cafe2Go</title>
+</head>
+
+<body>
+    <div class="container-lg">
+        <h1>Breakfast Menu</h1>
+        <table class="table table-hover table-dark">
+            <thead>
+                <tr>
+                    <th>Sr.no.</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Description</th>
+                    <th>Calories</th>
+                    <th>Image</th>
+                </tr>
+            </thead>
+            <tbody id="dataTable">
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Main Script -->
+    <script>
+        const dataTable = document.getElementById('dataTable');
+        let myReq = new Request('./bm.json');
+        fetch(myReq)
+            .then(function (resp) {
+                return resp.json();
+            })
+            .then(function (obj) {
+                let foods = obj.breakfast_menu.food;
+                foods.forEach(function (element, index) {
+                    dataTable.innerHTML +=
+                        `<tr>
+                        <td>${index + 1}</td>
+                        <td>${element.name}</td>
+                        <td>${element.price}</td>
+                        <td>${element.description}</td>
+                        <td>${element.calories}</td>
+                        <td><img src="${element.photoURL}" alt="${element.description}" height=125></td>
+                    </tr>`;
+                });
+            });
+    </script>
+    
+    <!-- Bootstrap Bundle(Popper and JS) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
