@@ -23,6 +23,7 @@
                     <th>Description</th>
                     <th>Calories</th>
                     <th>Image</th>
+                    <th>Preview</th>
                 </tr>
             </thead>
             <tbody id="dataTable">
@@ -49,6 +50,12 @@
                         <td>${element.description}</td>
                         <td>${element.calories}</td>
                         <td><img src="${element.photoURL}" alt="${element.description}" height=125></td>
+                        <td>
+                            <video height="125" controls autoplay muted loop>
+                                <source src="${element.videoURL}" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            </td>
                     </tr>`;
                 });
             });

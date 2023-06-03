@@ -6,6 +6,7 @@
           "price": "$5.95",
           "description": "Two of our famous Belgian Waffles with plenty of real maple syrup",
           "photoURL":"./contents/img/Belgian-Waffles.jpg",
+          "videoURL":"./contents/video/mov_bbb.mp4",
           "calories": 650
         },
         {
@@ -13,6 +14,7 @@
           "price": "$7.95",
           "description": "Light Belgian waffles covered with strawberries and whipped cream",
           "photoURL":"./contents/img/Strawberry-Belgian-Waffles.jpg",
+          "videoURL":"./contents/video/mov_bbb.mp4",
           "calories": 900
         },
         {
@@ -20,6 +22,7 @@
           "price": "$8.95",
           "description": "Belgian waffles covered with assorted fresh berries and whipped cream",
           "photoURL":"./contents/img/Berry-Berry-Belgian-Waffles.png",
+          "videoURL":"./contents/video/mov_bbb.mp4",
           "calories": 900
         },
         {
@@ -27,6 +30,7 @@
           "price": "$4.50",
           "description": "Thick slices made from our homemade sourdough bread",
           "photoURL":"./contents/img/French-Toast.jpg",
+          "videoURL":"./contents/video/mov_bbb.mp4",
           "calories": 600
         },
         {
@@ -34,6 +38,7 @@
           "price": "$6.95",
           "description": "Two eggs, bacon or sausage, toast, and our ever-popular hash browns",
           "photoURL":"./contents/img/Homestyle-Breakfast.jpg",
+          "videoURL":"./contents/video/mov_bbb.mp4",
           "calories": 950
         }
       ]
